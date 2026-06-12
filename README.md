@@ -34,10 +34,17 @@ This repo includes an optional GitHub Actions workflow to deploy to Vercel autom
 
 - `.github/workflows/deploy-vercel.yml` — uses the `vercel` CLI and requires the repository secret `VERCEL_TOKEN` (and optionally `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID`).
 
+- `.github/workflows/deploy-vercel.yml` — uses the `vercel` CLI and requires the repository secret `VERCEL_TOKEN`. Optionally add `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID` to target a specific Vercel project.
+
 To enable automated deploys:
 
 1. Go to your repository Settings → Secrets and create the required secret `VERCEL_TOKEN`.
 2. Push to the `main` branch. The workflow will run and deploy if the secret is present.
+
+Finding your Vercel IDs
+
+- `VERCEL_TOKEN`: create a Personal Token in Vercel under Settings → Tokens.
+- `VERCEL_ORG_ID` and `VERCEL_PROJECT_ID`: open your project in the Vercel dashboard and check the project settings or use the Vercel API to list projects. These are optional — if omitted the workflow will deploy using the Vercel account linked to the token.
 
 If you want me to open a PR that only contains the Vercel workflow and config, tell me and I will prepare it.
 

@@ -12,12 +12,18 @@ jobs:
       - name: Install Vercel CLI
         run: npm install -g vercel
       - name: Deploy to Vercel
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: |
-          # Deploys the repo root to the linked Vercel project. Ensure you've created
-          # the Vercel project and added the VERCEL_TOKEN secret in this repo.
-          vercel --prod --token $VERCEL_TOKEN --confirm
+            env:
+              VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+              VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+              VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+            run: |
+              # Deploy the repo root to Vercel. Provide optional `VERCEL_ORG_ID` and
+              # `VERCEL_PROJECT_ID` as secrets to target a specific project.
+              if [ -n "$VERCEL_ORG_ID" ] && [ -n "$VERCEL_PROJECT_ID" ]; then
+                vercel --prod --token "$VERCEL_TOKEN" --confirm --org "$VERCEL_ORG_ID" --project "$VERCEL_PROJECT_ID"
+              else
+                vercel --prod --token "$VERCEL_TOKEN" --confirm
+              fi
 
 # Secrets required:
 # - VERCEL_TOKEN (your Vercel personal token)
