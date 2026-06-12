@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeTask | Lightweight task tracker</title>
+  <meta name="description" content="VibeTask is a lightweight task-tracking web app built with Vibe Coding principles. Organize tasks with speed, clarity, and style." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">VibeTask</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Lightweight task tracking with a human vibe</p>
+          <h1>Get more done with VibeTask.</h1>
+          <p class="hero-text">A simple, elegant landing page for your workflow. Plan, prioritize, and finish tasks with clarity and calm.</p>
+          <div class="actions">
+            <a class="button button-primary" href="#features">Explore features</a>
+            <a class="button button-secondary" href="#contact">Contact us</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="card-mockup">
+            <div class="mockup-header"></div>
+            <div class="mockup-body">
+              <div class="task-row completed"></div>
+              <div class="task-row"></div>
+              <div class="task-row"></div>
+              <div class="task-row"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section features-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Features</p>
+          <h2>Designed for quick clarity, calm focus, and fast execution.</h2>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <h3>Minimal task view</h3>
+            <p>See your next actions at a glance with a clean interface and priority-driven layout.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Fast planning</h3>
+            <p>Capture ideas, set due dates, and organize tasks without clutter or extra steps.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Responsive design</h3>
+            <p>Works beautifully on desktop, tablet, and mobile so your workflow stays consistent anywhere.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Stay in touch while VibeTask evolves.</h2>
+          <p>Send your ideas, feedback, or launch support requests. We're building VibeTask with user-first simplicity.</p>
+        </div>
+        <form class="contact-form" action="mailto:hello@vibetask.app" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us what you'd like to see." required></textarea>
+
+          <button class="button button-primary" type="submit">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Built for quick focus and fast iteration.</p>
+      <p>&copy; 2026 VibeTask</p>
+    </div>
+  </footer>
+</body>
+</html>
