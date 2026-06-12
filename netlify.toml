@@ -1,0 +1,6 @@
+[build]
+  publish = "."
+  command = ""
+
+# Netlify will deploy the repository root as a static site.
+# If you want to run a build step, set `command` to your build command.

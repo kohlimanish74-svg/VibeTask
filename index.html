@@ -48,6 +48,26 @@
       </div>
     </section>
 
+    <section id="app" class="section app-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Prototype</p>
+          <h2>Try the VibeTask prototype</h2>
+        </div>
+
+        <div class="task-app">
+          <form id="task-form" class="task-form" autocomplete="off">
+            <input id="task-title" name="title" type="text" placeholder="Add a new task..." required />
+            <input id="task-due" name="due" type="date" />
+            <button class="button button-primary" type="submit">Add task</button>
+            <button id="task-cancel-edit" class="button button-secondary" type="button" style="display:none">Cancel edit</button>
+          </form>
+
+          <div class="task-list" id="task-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
     <section id="features" class="section features-section">
       <div class="container">
         <div class="section-heading">
@@ -101,4 +121,6 @@
     </div>
   </footer>
 </body>
+<script src="script.js"></script>
+</html>
 </html>
